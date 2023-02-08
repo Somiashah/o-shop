@@ -1,0 +1,53 @@
+<div class="container py-5 text-center">
+
+
+    <h2>Shopping Cart</h2>
+    <div class=" card " *ngIf="cart$| async as cart " style="width: 100%; ">
+        <div class="card-body padTp ">
+            <p>
+                You have {{ cart.totalItemsCount }} items in your shopping cart.
+
+            </p>
+        </div>
+        <table class="table table-hover table-striped" style="color:grey">
+            <thead style="color:grey">
+                <tr>
+                    <th>Product</th>
+                    <th class="text-center " style="width:230px; color:grey; ">Quantity</th>
+                    <th class="text-end " style="width:220px; color:grey;">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of cart.items ">
+                    <td>
+                        <img [src]="item.imageUrl " class="thumbnail " alt=" " />
+                    </td>
+                    <td class="paddingTop ">{{ item.title}}</td>
+
+                    <td class="paddTop ">
+                        <product-quantity [product]="item " [shopping-cart]="cart "> </product-quantity>
+                    </td>
+                    <td class="text-end paddingTop ">
+                        {{ item.totalPrice| currency:'AED' :true }}
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="table-secondary ">
+                    <th>Total Price</th>
+                    <th></th>
+                    <th></th>
+                    <th class="text-right ">{{ cart.totalPrice | currency : 'AED' :true }}</th>
+                </tr>
+                <tr>
+
+                </tr>
+            </tfoot>
+        </table>
+
+        <button *ngIf="cart.items.length " routerLink="/checkout" class="btn   col-6  mx-auto float-right btn-block  ">Checkout</button>
+        <a *ngIf="cart.items.length " (click)="clearCart() " class="float-right  col-6  mx-auto btn btn-secondary btn-sm t ">
+            Clear Cart
+        </a>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import"~font-awesome/css/font-awesome.css";
+@import"~bootstrap/dist/css/bootstrap.css";
+body {
+    padding-top: 20px;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+    background: #fff;
+    color: #848484;
+    font-weight: 300;
+    overflow-x: hidden;
+    margin-top: 60px
+}
+
+a:hover {
+    text-decoration: none !important;
+    color: grey!important;
+}
+
+button {
+    color: white !important;
+    background-color: #79b47c !important;
+}
+
+button-primary {
+    background-color: #79b47c !important;
+}
+
+h2 {
+    color: #79b47c !important
+}
+
+h3 {
+    color: #79b47c !important
+}
+
+.list-group-item {
+    color: grey !important
+}
+
+.list-group-item.active {
+    background-color: #79b47c;
+    border-color: #79b47c
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #79b47c;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #79b47c;
+}
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: #79b47c !important
+}

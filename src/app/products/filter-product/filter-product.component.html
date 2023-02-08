@@ -1,0 +1,16 @@
+<div class="sticky-top">
+
+
+    <div class="list-group " style="box-shadow: 
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);">
+        <a class="list-group-item list-group-item-action" [class.active]="!category" routerLink="/products">
+          All Categories 
+      </a>
+        <a *ngFor="let c of categories$ | async" class="list-group-item list-group-item-action" routerLink="/products" [queryParams]="{ category: c.key}" [class.active]="category === c.key">
+          {{ c.name }}
+      </a>
+    </div>
+
+
+</div>

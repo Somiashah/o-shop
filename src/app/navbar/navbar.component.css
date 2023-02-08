@@ -1,0 +1,11 @@
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.modal-backdrop {
+    display: none !important;
+}
+
+.badge-pill {
+    border-radius: 50%;
+}

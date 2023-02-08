@@ -1,0 +1,180 @@
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+    
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+    
+    .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+    
+    .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+    }
+    
+    .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+    }
+</style>
+
+
+<!-- Custom styles for this template -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="bd-placeholder-img" width="100%" height="150%" src="assets/Images/t.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" style="background-size: contain.">
+
+
+            <div class="container-fluid">
+                <div class="carousel-caption text-start">
+                    <h1>Organic Shop</h1>
+                    <p>Eat healthy !</p>
+                    <p><button class="btn btn-lg " href="/products">Shop Now</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+    <h2>Shop by Categories</h2>
+
+    <!-- Three columns of text below the carousel -->
+
+
+    <div class=" card-body">
+        <div class="row">
+
+            <a *ngFor="let c of categories$ | async" class="container col-md-2 
+                " routerLink="/products" [queryParams]="{ category: c.key}" [class.active]="category === c.key">
+
+
+                <img class=" bd-placeholder-img " src="{{ c.imageUrl }}" width=" 150" height="150" role="img " aria-label="Placeholder: 140x140" style="border-radius:2px;  box-shadow: 
+                        12px 12px 16px 0 rgba(148, 144, 144, 0.25),
+                        -8px -8px 12px 0 rgba(240, 224, 224, 0.3); align-items: center;">
+
+                <div class="card-title ">
+
+                    <h5>{{c.name}}</h5>
+                </div>
+
+            </a>
+        </div>
+    </div>
+    <!-- /.col-lg-4 -->
+
+
+
+
+    <!-- /.col-lg-4 -->
+    <!-- START THE FEATURETTES -->
+
+
+
+    <hr class="featurette-divider ">
+
+    <div class="row featurette ">
+        <div class="col-md-7 order-md-2 ">
+            <h2 class="featurette-heading fw-normal lh-1 ">Benefits Of eating Organic Food</h2>
+            <p class="lead ">
+                <ul>
+                    <li>
+                        Reduced exposure to pesticides and insecticides. ...</li>
+                    <li>Increased exposure to omega-3 fatty acids. ...</li>
+
+                    <li>Less exposure to cadmium. ...</li>
+                    <li> Increased levels of vitamins, minerals, antioxidants and other beneficial micronutrients. ... </li>
+                    <li> Less bacteria. ... Less exposure to antibiotics</li>
+                </ul>
+
+
+
+        </div>
+        <div class="col-md-5 order-md-1 ">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto " src="assets/Images/Organic-Food.jpg" width="500 " height="500 ">
+            <title>Placeholder</title>
+
+        </div>
+    </div>
+    <hr class="featurette-divider ">
+
+
+
+    <div class="row featurette ">
+        <div class="col-md-7 ">
+            <h2 class="featurette-heading fw-normal lh-1 ">A boon for our immunity <span class="text-muted "></span></h2>
+            <p class="lead ">Organic agriculture is essentially a natural method, the food produce is richer in vitamins and essential mineral, making it tremendously beneficial for our immune system. Consider it your best nutritionist.</p>
+        </div>
+        <div class="col-md-5 order-md-1 ">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto " src="assets/Images/c.jpeg " width="500 " height="500 ">
+            <title>Placeholder</title>
+
+        </div>
+    </div>
+
+
+
+
+    <hr class="featurette-divider ">
+
+    <div class="row featurette ">
+        <div class="col-md-7 ">
+            <h2 class="featurette-heading fw-normal lh-1 ">And lastly, Planet-friendly <span class="text-muted "> </span></h2>
+            <p class="lead ">And yes, Organic food produce is devoid of any chemical fertilizers and pesticides. Hence, it is healthier. so lets GO GREEN
+            </p>
+        </div>
+        <div class="col-md-5 ">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto " src="assets/Images/a.jpeg " width="500 " height="500 ">
+            <title>Placeholder</title>
+
+        </div>
+    </div>
+
+    <hr class="featurette-divider ">
+
+    <!-- /END THE FEATURETTES -->
+
+</div>
+<!-- /.container -->
+
+
+<!-- FOOTER -->
+<footer class="container ">
+    <p class="float-end "><a href="# ">Back to top</a></p>
+    <p>somiashah@gmail.com
+        <a href="# "></a>
+    </p>
+</footer>

@@ -1,0 +1,31 @@
+.card-footer {
+    padding: 0;
+    padding: 0;
+    background: whitesmoke;
+    margin: 0;
+    border: 0;
+    margin-left: -1px;
+}
+
+.card {
+    margin-bottom: 30px;
+}
+
+.btn.btn-primary {
+    width: 100%;
+}
+
+.card-footer button {
+    cursor: pointer
+}
+
+.card-img-top {
+    height: 220px;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #79b47c;
+}
