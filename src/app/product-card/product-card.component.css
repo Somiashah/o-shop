@@ -1,7 +1,6 @@
 .card-footer {
     padding: 0;
     padding: 0;
-    background: whitesmoke;
     margin: 0;
     border: 0;
     margin-left: -1px;
@@ -12,7 +11,7 @@
 }
 
 .btn.btn-primary {
-    width: 90%;
+    width: 80%;
 }
 
 .card-footer button {
